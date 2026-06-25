@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Library Management System</h1>
+
+<a href="/add">
+    <button>Add Book</button>
+</a>
+
+<br><br>
+
+<form action="/search" method="GET">
+    <input type="text" name="keyword" placeholder="Search by Title or Author">
+    <button type="submit">Search</button>
+</form>
+
+<br>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Category</th>
+    <th>Quantity</th>
+    <th>Actions</th>
+</tr>
+
+{% for book in books %}
+
+<tr>
+
+<td>{{ book.id }}</td>
+<td>{{ book.title }}</td>
+<td>{{ book.author }}</td>
+<td>{{ book.category }}</td>
+<td>{{ book.quantity }}</td>
+
+<td>
+
+<a href="/edit/{{ book.id }}">
+<button>Edit</button>
+</a>
+
+<a href="/issue/{{ book.id }}">
+<button>Issue</button>
+</a>
+
+<a href="/return/{{ book.id }}">
+<button>Return</button>
+</a>
+
+<a href="/delete/{{ book.id }}">
+<button>Delete</button>
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
