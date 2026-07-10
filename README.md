@@ -53,7 +53,8 @@ Library-Management-System/
 │
 ├── app.py
 ├── database.py
-├── library.db
+├── README.md
+├── .gitignore
 │
 ├── templates/
 │   ├── index.html
@@ -64,8 +65,6 @@ Library-Management-System/
 │
 ├── static/
 │   └── style.css
-│
-└── README.md
 ```
 
 ---
