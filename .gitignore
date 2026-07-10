@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# SQLite Database
+library.db
+
+# Virtual Environment
+venv/
+.env
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
