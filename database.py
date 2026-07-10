@@ -19,8 +19,11 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS issued_books(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     student_name TEXT NOT NULL,
+    roll_no TEXT NOT NULL,
     book_id INTEGER NOT NULL,
-    issue_date TEXT NOT NULL
+    issue_date TEXT NOT NULL,
+    return_date TEXT NOT NULL,
+    FOREIGN KEY(book_id) REFERENCES books(id)
 )
 """)
 
