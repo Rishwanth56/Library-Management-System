@@ -1,0 +1,126 @@
+/* ---------- BODY ---------- */
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f8f9fa;
+}
+
+/* ---------- PAGE ANIMATION ---------- */
+
+.container{
+    animation:fadeIn .6s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+    box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+.navbar-brand{
+    font-size:30px;
+    font-weight:bold;
+}
+.nav-link{
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+.nav-link:hover{
+    color:#000000;
+}
+/* ---------- DASHBOARD CARDS ---------- */
+
+.dashboard-card{
+    border:none;
+    border-radius:18px;
+    transition:all .35s ease;
+    cursor:pointer;
+    overflow:hidden;
+}
+.dashboard-card:hover{
+    transform:translateY(-15px);
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+}
+.dashboard-card i{
+    transition:.35s;
+}
+.dashboard-card:hover i{
+    transform:scale(1.2) rotate(-5deg);
+}
+.dashboard-card h1{
+    transition:.35s;
+}
+.dashboard-card:hover h1{
+    transform:scale(1.15);
+}
+/* ---------- NORMAL CARDS ---------- */
+
+.card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+/* ---------- BUTTONS ---------- */
+
+.btn{
+    border-radius:8px;
+    transition:.3s;
+}
+.btn:hover{
+    transform:scale(1.08);
+}
+/* ---------- TABLE ---------- */
+
+.table{
+    border-radius:15px;
+    overflow:hidden;
+}
+.table th{
+    text-align:center;
+}
+.table td{
+    text-align:center;
+    vertical-align:middle;
+}
+/* ---------- INPUT ---------- */
+
+.form-control{
+    border-radius:8px;
+}
+.form-control:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 10px rgba(13,110,253,.4);
+}
+/* ---------- FOOTER ---------- */
+
+footer{
+    margin-top:50px;
+    padding:15px;
+    background:#212529;
+    color:white;
+    text-align:center;
+}
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+
+.navbar-brand{
+font-size:22px;
+}
+.nav-link{
+font-size:16px;
+}
+.dashboard-card{
+margin-bottom:20px;
+}
+}
